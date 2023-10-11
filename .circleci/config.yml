@@ -16,7 +16,7 @@ jobs:
       # Build the .NET application
       - run:
           name: Build Application
-          command: dotnet run
+          command: dotnet build
 
       
 
