@@ -1,24 +1,16 @@
 version: 2.1
-
 orbs:
-  windows: circleci/windows@2.2.0
-
+  dotnet: circleci/dotnet@4.1.0
 jobs:
   build:
-    docker:
-      - image: mcr.microsoft.com/dotnet/core/sdk:latest
-
+    executor: dotnet/default
     steps:
-      - checkout
-
-      # Restore dependencies
-      - run:
-          name: Restore Dependencies
-          command: dotnet build
-
-
+      - dotnet restore
+      - dotnet build
+  
 workflows:
-  version: 2
-  build:
+  build-test:
     jobs:
       - build
+    
+
