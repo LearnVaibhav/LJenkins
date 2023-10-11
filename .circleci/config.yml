@@ -9,7 +9,7 @@ jobs:
       - dotnet build
   
 workflows:
-  build-test:
+  build:
     jobs:
       - build
     
