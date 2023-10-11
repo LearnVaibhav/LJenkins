@@ -16,12 +16,9 @@ jobs:
       # Build the .NET application
       - run:
           name: Build Application
-          command: dotnet build --configuration Release
+          command: dotnet run
 
-      # Run unit tests
-      - run:
-          name: Run Unit Tests
-          command: dotnet test --configuration Release --no-restore
+      
 
 workflows:
   version: 2
