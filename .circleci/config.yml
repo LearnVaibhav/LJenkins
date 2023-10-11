@@ -1,6 +1,6 @@
 version: 2.1
 orbs:
-  dotnet: circleci/dotnet@4.1.0
+  dotnet: circleci/dotnet@0.0.44
 jobs:
   build:
     executor: dotnet/default
